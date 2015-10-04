@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="QSForex" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/QSForex" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wnon-virtual-dtor" />
+					<Add option="-Wshadow" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wundef" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Winline" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-std=c++11" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-fexceptions -fpermissive" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-lpthread -ljson-c -lcurl" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/QSForex" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions -fpermissive" />
+		</Compiler>
+		<Linker>
+			<Add option="-lcurl" />
+		</Linker>
+		<Unit filename="include/Event.h" />
+		<Unit filename="include/Execution.h" />
+		<Unit filename="include/StreamingForexPrices.h" />
+		<Unit filename="include/settings.h" />
+		<Unit filename="include/strategy.h" />
+		<Unit filename="include/thread.h" />
+		<Unit filename="include/trade.h" />
+		<Unit filename="include/wqueue.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Event.cpp" />
+		<Unit filename="src/Execution.cpp" />
+		<Unit filename="src/StreamingForexPrices.cpp" />
+		<Unit filename="src/settings.cpp" />
+		<Unit filename="src/strategy.cpp" />
+		<Unit filename="src/thread.cpp" />
+		<Unit filename="src/trade.cpp" />
+		<Unit filename="src/wqueue.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
