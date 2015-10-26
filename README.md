@@ -29,6 +29,10 @@ wqueue.cpp
 
 Declares a  wqueue of type pointer to Event class : wqueue<Event*> events_queue;
 
+Event.h
+
+This header declares a class Event with 2 derived classes : TickEvent and OrderEvent
+
 
 
 
