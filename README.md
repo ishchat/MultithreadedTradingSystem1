@@ -31,7 +31,20 @@ Declares a  wqueue of type pointer to Event class : wqueue<Event*> events_queue;
 
 Event.h
 
-This header declares a class Event with 2 derived classes : TickEvent (to hold incoming tick data from OANDA) and OrderEvent (to hold the orders sent to OANDA based upon strategy and signal). The reason for deriving them from same class is that we want to store them in same multithreaded queue to 
+This header declares a class Event with 2 derived classes : TickEvent (to hold incoming tick data from OANDA) and OrderEvent (to hold the orders sent to OANDA based upon strategy and signal). The reason for deriving them from same class is that we want to store them in same queue of type base Event class pointer
+
+Event.cpp
+
+Defines the TickEvent and OrderEvent classes derived from Event class. The bid and ask prices are stored in TickEvent class.
+OrderEvent class stores order type and other details of the order.
+
+StreamingForexPrices.h
+
+class StreamingForexPrices is derived from base class thread from thread.h
+
+
+
+
 
 
 
