@@ -17,6 +17,10 @@ settings.cpp
 
 This file contains the values of the declared variables in settings.h
 
+wqueue.h
+
+This header file declares the worker queue that forms the core data struccture for storing the incoming ticks.
+The class is taken from tje blog :  http://vichargrave.com/multithreaded-work-queue-in-c/ 
 
 
 
