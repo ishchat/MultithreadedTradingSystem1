@@ -57,6 +57,23 @@ Execution.cpp
 To take the Event pointer as argument, cast to OrderEvent and get the instrument, order type, units to buy/sell. 
 Then post this order using through OANDA API using libcurl.
 
+strategy.cpp -Takes event as argument and calculates signal. If the signal is correct it cerates object of order class and adds to wqueue
+static void strategy::calculate_signals(Event* event)
+if (event->type == "TICK")
+OrderEvent* order = new OrderEvent(instrument, units, "market", side);
+events_queue.add(order);
+
+trade.cpp
+Continuous loop while(1)
+wqueue.remove
+If event type is tick->calculate signals in strategy class
+If event type is order->execute order
+
+main.cpp
+StreamingForexPrices* thread1 
+thread1->start();
+trade* thread2
+thread2->start();
 
 
 
