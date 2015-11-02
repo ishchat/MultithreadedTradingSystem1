@@ -45,8 +45,14 @@ This would enable it to run as a separate thread. The class uses C library CURL 
 void StreamingForexPrices::stream_to_queue(void) function sets various options using CURL to get quotes from the API. A callback called WriteMemoryCallback is used (a callback is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some convenient time) to store the data receivd from API into a structure.
 static size_t StreamingForexPrices::WriteMemoryCallback(void *contents, size_t size, size_t nmemb, void *userp) function parses the data *contents
 
+Execution.h
 
+Declaration for Class Execution
 
+Execution.cpp
+
+To take the Event pointer as argument, cast to OrderEvent and get the instrument, order type, units to buy/sell. 
+Then post this order using through OANDA API using libcurl.
 
 
 
